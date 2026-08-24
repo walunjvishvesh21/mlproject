@@ -7,4 +7,12 @@ catboost
 xgboost
 Flask
 dill
+pandas
+numpy
+seaborn
+matplotlib
+scikit-learn
+catboost
+xgboost
+Flask
 #-e .
