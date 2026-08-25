@@ -11,7 +11,14 @@ from src.logger import logging
 import os
 
 from src.utile import save_object
+'''
+data_transformation.py raw train/test data leta hai, 
+numerical aur categorical columns ko alag-alag process karta hai, 
+missing values handle karta hai, categorical values ko numbers mein convert karta hai, 
+numerical values scale karta hai, processed data ModelTrainer ko deta hai 
+aur same preprocessing object ko preprocessing.pkl mein save karta hai.
 
+'''
 
 @dataclass
 class DataTransformationConfig:

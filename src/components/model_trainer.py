@@ -1,6 +1,11 @@
 import os
 import sys
 from dataclasses import dataclass
+'''
+model_trainer.py ka main kaam processed training aur testing data lekar multiple ML regression models ko train aur evaluate karna hai; ye Random Forest, Decision Tree, Gradient Boosting, Linear Regression, XGBoost, CatBoost aur AdaBoost jaise models ko different hyperparameter settings ke saath evaluate_models() ke through try karta hai, har model ka performance score compare karta hai, sabse highest R² score wala best model select karta hai, agar score 0.6 se kam ho toh error deta hai, warna best model ko artifacts/model.pkl mein save karta hai, phir X_test par predict() karke predictions banata hai aur actual y_test ke saath compare karke final R² score return karta hai.
+
+
+'''
 
 from catboost import CatBoostRegressor
 from sklearn.ensemble import (

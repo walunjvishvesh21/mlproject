@@ -7,6 +7,12 @@ import sys
 import pandas as pd
 from src.exception import CustomException
 from src.utile import load_object
+'''
+Ye file prediction ke time use hoti hai: CustomData class user se aane wale inputs — jaise gender, race, education, lunch, test preparation, reading score aur writing score — ko ek Pandas DataFrame mein convert karti hai; phir PredictPipeline.predict() artifacts/model.pkl se trained model aur artifacts/preprocessing.pkl se training ke time wala same preprocessor load karta hai, preprocessor.transform(features) se user ke data ko exactly training data jaisa preprocess karta hai, aur phir model.predict(data_scaled) se math score predict karta hai. 
+Simple flow: User input → DataFrame → saved preprocessing → processed data → saved trained model → predict() → predicted math score.
+
+'''
+
 
 class PredictPipeline:
     def __init__(self):

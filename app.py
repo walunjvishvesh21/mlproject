@@ -1,3 +1,16 @@
+
+## Yeh Flask application ek web-based ML prediction app hai.
+## User form mein details enter karta hai → Flask details leta hai →
+## Pandas DataFrame banta hai → ML prediction pipeline ko data diya jata hai → prediction aati hai → result webpage par show hota hai.
+
+'''
+
+Ye pura app user se HTML form ke through student ka data leta hai, us data ko DataFrame mein convert karta hai, 
+trained ML model se prediction karwata hai, aur final predicted result webpage par user ko dikha deta hai.
+
+'''
+
+
 from flask import Flask,request,render_template
 import numpy as np
 import pandas as pd

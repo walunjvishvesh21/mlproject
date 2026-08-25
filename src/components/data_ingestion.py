@@ -11,6 +11,15 @@ from src.components.data_transformation import DataTransformationConfig, DataTra
 from src.components.model_trainer import ModelTrainerConfig, ModelTrainer
 
 
+'''
+data_ingestion.py file ka main kaam poori ML pipeline ko start karna hai — sabse pehle DataIngestionConfig mein raw, train aur test files ke paths define hote hain, phir DataIngestion class stud.csv dataset ko read karke artifacts folder mein raw data save karti hai aur dataset ko 80% training aur 20% testing mein divide karke train.csv aur test.csv save karti hai; uske baad wahi train/test data DataTransformataion ko diya jata hai jahan data ko ML model ke layak transform kiya jata hai, aur finally transformed data ModelTrainer ko diya jata hai jahan ML models train hote hain, unke performance compare hote hain aur best model/result generate hota hai. 
+Simple words mein: data_ingestion.py = data read karo → train/test mein divide karo → data transform karo → model train karo → result do.
+
+
+'''
+
+
+
 @dataclass
 class DataIngestionConfig:
     train_data_path: str = os.path.join('artifacts', 'train.csv')
